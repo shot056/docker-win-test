@@ -1,5 +1,8 @@
 name: buildtest
 
+on:
+  workflow_dispatch:
+
 jobs:
   buildtest:
     runs-on: windows-latest
