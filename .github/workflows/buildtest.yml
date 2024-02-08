@@ -22,6 +22,8 @@ jobs:
           choco --version
           echo aws --version
           aws --version
+          echo zip --version
+          zip --version
           
       # - name: build test
       #   run: docker build -t win-unity-ruby:teste .
