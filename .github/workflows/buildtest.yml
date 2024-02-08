@@ -16,12 +16,12 @@ jobs:
           dir
           echo tasklist
           tasklist
-          echo git --help
-          git --help
-          echo choco
-          choco
-          echo aws help
-          aws help
+          echo git --version
+          git --version
+          echo choco --version
+          choco --version
+          echo aws --version
+          aws --version
           
       # - name: build test
       #   run: docker build -t win-unity-ruby:teste .
