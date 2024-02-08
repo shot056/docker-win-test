@@ -12,10 +12,16 @@ jobs:
 
       - name: cmd test
         run: |
+          echo dir
           dir
+          echo tasklist
           tasklist
-          git
-          aws
+          echo git --help
+          git --help
+          echo choco
+          choco
+          echo aws help
+          aws help
           
       # - name: build test
       #   run: docker build -t win-unity-ruby:teste .
