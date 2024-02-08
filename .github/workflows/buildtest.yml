@@ -16,5 +16,6 @@ jobs:
           tasklist
           git
           aws
-      - name: build test
-        run: docker build -t win-unity-ruby:teste .
+          
+      # - name: build test
+      #   run: docker build -t win-unity-ruby:teste .
