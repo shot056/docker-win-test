@@ -27,8 +27,8 @@ jobs:
       #   shell: cmd
       #   run: test.bat
 
-      - name: env
-        run: set
+      # - name: env
+      #   run: set
 
       - name: shell-bash
         shell: bash
