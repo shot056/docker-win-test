@@ -23,10 +23,17 @@ jobs:
           echo aws --version
           aws --version
           
-      - name: bat test
-        shell: cmd
-        run: test.bat
+      # - name: bat test
+      #   shell: cmd
+      #   run: test.bat
 
+      - name: env
+        run: set
+
+      - name: shell-bash
+        shell: bash
+        run: env | sort
+        
       - name: bash
         run: |
           bash --version
