@@ -22,8 +22,13 @@ jobs:
           choco --version
           echo aws --version
           aws --version
+          
       - name: bat test
         shell: cmd
         run: test.bat
+
+      - name: bash
+        run: |
+          bash --version
       # - name: build test
       #   run: docker build -t win-unity-ruby:teste .
