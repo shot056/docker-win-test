@@ -22,8 +22,6 @@ jobs:
           choco --version
           echo aws --version
           aws --version
-          echo zip --version
-          zip --version
           
       # - name: bat test
       #   shell: cmd
@@ -41,3 +39,9 @@ jobs:
           bash --version
       # - name: build test
       #   run: docker build -t win-unity-ruby:teste .
+
+      - name: 7zip
+        shell: powershell
+        run: |
+          Install-Module -Name 7Zip4PowerShell -Verbose
+          Get-Command -Module 7Zip4PowerShell
