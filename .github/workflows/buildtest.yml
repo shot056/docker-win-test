@@ -43,5 +43,5 @@ jobs:
       - name: 7zip
         shell: powershell
         run: |
-          Install-Module -Name 7Zip4PowerShell -Verbose
+          Install-Module -Name 7Zip4PowerShell -Verbose -Force
           Get-Command -Module 7Zip4PowerShell
