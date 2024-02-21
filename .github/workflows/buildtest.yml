@@ -48,7 +48,7 @@ jobs:
           del C:\Temp\7zip_installer.exe
       - name: run 7zip with path
         shell: cmd
-        run: "C:\Program Files\7-Zip\7z.exe" -version
+        run: C:\Program Files\7-Zip\7z.exe -version
       - name: run 7zip
         shell: cmd
         run: 7z.exe -version
