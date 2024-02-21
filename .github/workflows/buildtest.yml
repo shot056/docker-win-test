@@ -40,8 +40,20 @@ jobs:
       # - name: build test
       #   run: docker build -t win-unity-ruby:teste .
 
-      - name: 7zip
+      - name: install 7zip
         shell: powershell
         run: |
-          Install-Module -Name 7Zip4PowerShell -Verbose -Force
-          Get-Command -Module 7Zip4PowerShell
+          Invoke-WebRequest https://www.7-zip.org/a/7z2401-x64.exe -OutFile C:\Temp\7zip_installer.exe
+          Start-Process -Wait -FilePath C:\Temp\7zip_installer.exe -ArgumentList "/S"
+          del C:\Temp\7zip_installer.exe
+      - name: run 7zip with path
+        shell: cmd
+        run: "C:\Program Files\7-Zip\7z.exe" -version
+      - name: run 7zip
+        shell: cmd
+        run: 7z.exe -version
+      # - name: 7zip
+      #   shell: powershell
+      #   run: |
+      #     Install-Module -Name 7Zip4PowerShell -Verbose -Force
+      #     Get-Command -Module 7Zip4PowerShell
